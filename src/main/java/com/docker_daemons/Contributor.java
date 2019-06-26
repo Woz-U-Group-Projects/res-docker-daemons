@@ -10,7 +10,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "contributor")
 public class Contributor {
-
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
@@ -24,7 +23,6 @@ public class Contributor {
     private boolean vacancy;
     private String licenceType;
     private String tags;
-
 
     public Integer getId() {
         return id;

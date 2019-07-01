@@ -25,10 +25,15 @@ import org.springframework.web.bind.annotation.RestController;
         ContributorRepository contributorRepository;
 
 
-        @GetMapping()
-        public List<Contributor> getFruits(){
+        
+
+        @GetMapping
+
+        /*@GetMapping()
+        public List<Contributor> getContributor(){
+
             return ContributorRepository.findAll();
-        }
+        }*/
 
         @PostMapping()
         public ResponseEntity<Contributor> addContributor(@RequestBody Contributor contributor){
@@ -41,4 +46,4 @@ import org.springframework.web.bind.annotation.RestController;
 
 
     }
-}
+

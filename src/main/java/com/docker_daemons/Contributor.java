@@ -15,7 +15,7 @@ public class Contributor {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     @NotNull
-    private String name;
+    private String contributor;
     private String owner;
     private String email;
     private String link;
@@ -34,16 +34,16 @@ public class Contributor {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getContributor() {
+        return contributor;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setContributor(String contributor) {
+        this.contributor = contributor;
     }
 
     public boolean validModel() {
-        return name!=null;
+        return contributor!=null;
     }
 
     public String getOwner() {

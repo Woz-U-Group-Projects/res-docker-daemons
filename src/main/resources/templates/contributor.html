@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html xmlns:th=“http://www.thymeleaf.org“>
+<head>
+    <title>Contributors Page</title>
+    <meta http-equiv=“Content-Type” content=“text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Contributors</h1>
+<div th:if=“${!contributor.empty}“>
+    <table>
+        <tr>
+            <th>Contributor Id</th>
+            <th>Contributor Name</th>
+            <th>Project Owner</th>
+            <th>Project Owner Email</th>
+            <th>Project Contributor Link</th>
+            <th>Project Description</th>
+            <th>Project Rating</th>
+            <th>Project Vacancy</th>
+            <th>Project Licence Type</th>
+            <th>Project Tags</th>
+        </tr>
+        <tr th:each=“contributor : ${contributor}“>
+            <td th:text=“${contributor.id}“>Contributor Id</td>
+            <td th:text=“${contributor.contributor}“>Contributor Name</td>
+            <td th:text=“${contributor.owner}“>Project Owner</td>
+            <td th:text=“${contributor.email}“>Project Owner Email</td>
+            <td th:text="${contributor.link}">Project Contributor Link</td>
+            <td th:text=“${contributor.description}“>Project Description</td>
+            <td th:text=“${contributor.rating}“>Project Rating</td>
+            <td th:text="${contributor.vacancy}">Project Vacancy</td>
+            <td th:text="${contributor.licenceType}">Project Licence Type</td>
+            <td th:text="${contributor.tags}">Project Tags</td>
+
+        </tr>
+    </table>
+</div>
+<div th:if=“${actors.empty}“>
+    <h3>No actors found!</h3>
+</div>
+</body>
+</html>
